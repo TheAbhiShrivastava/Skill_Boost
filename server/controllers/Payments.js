@@ -211,7 +211,7 @@ exports.sendPaymentSuccessEmail = async (req, res) => {
         const enrolledStudent =  await User.findById(userId);
         await mailSender(
             enrolledStudent.email,
-            `Study Notion Payment successful`,
+            `Skill Boost Payment successful`,
             paymentSuccess(amount/100, paymentId, orderId, enrolledStudent.firstName, enrolledStudent.lastName),
         );
 }
